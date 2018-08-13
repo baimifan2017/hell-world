@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<!-- 
+      1711103.html
+      <project>
+      1、HTML 5 应用程序缓存
+        1.1 manifest  指明cache地址
+        1.2 注意chache文件 CAHCE MANIFET 下面文件必须指明路径
+        1.3 引用文件即使不指定也自动会缓存
+        1.4 CACHE:设置后面的文件为缓存
+                                    缓存内容通常为CSS、html、picture、js
+		　　　　NETWORK:置后面的文件为不缓存（无法设置自身页面）
+		　　　　FALLBACK:置后面的文件错误或不存在的时候使用另一个文件  
+										 FALLBACK是不存在是使用另一个文件替代，下面是个例子/x.css /test.css 如果x.css不存在则使用test.css代替。
+		　　　　SETTINGS:可以设置fast或prefer-online两种模式
+      Created by lzh on 2017-11-01.
+      Copyright 2017 lzh. All rights reserved.
+ -->
+
+<html manifest="index.appcache">
+	<head>
+		<meta charset="UTF-8">
+		<!--//zh-cmn-Hans 表示中文-->
+		<meta lang="EN" />
+		<title></title>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script src="../js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+	</head>
+	<body>
+		<div style="width: 100; height: 100px; background: red;">
+		</div>
+		<!--input输入类型练习-->
+		<input type="txt" value="123/>
+		<input type="url" value=""/>
+		<input type="date" value=""/>
+		<input type="datetime" value=""/>
+		<input type="datetime-local" value="" />
+		<input type="number" min="0" max="10" value="5"/>
+		<input type="text" autocomplete="on" />
+		<!--表单元素-->
+		<input type="url" list="url_list" name="link" />
+		<datalist id="url_list">
+			<option value="1111">11</option>
+			<option value="2111">12</option>
+			<option value="3111">13</option>
+		</datalist>
+		<select>
+			<option>11</option>
+			<option>22</option>
+			<option>33</option>
+		</select>
+		<a href="http:\\www.baidu.com" accesskey="p">www.baidu.com</a>
+		<!--规定了按tab键选中对象的顺序-->
+		<a href="http://www.w3school.com.cn/" tabindex="2">W3School</a><br />
+		<a href="http://www.google.com/" tabindex="1">Google</a><br />
+		<a href="http://www.microsoft.com/" tabindex="3">Microsoft</a>
+		<!--映射-->
+		<img src="../img/welcome-1.jpg" usemap="#usemap" />
+		<map id="usemap" name="usemap">
+			<area shape="circle" coords="100,100,320" href="1711101.html" />
+			<area shape="rect"  coords="320,320,750,750" href="http:\\www.baidu.com"  style="border: 1px solid black;"/>
+			<!--多边形-->
+			<area shape="poly"  coords="320,320,250,250,600,600" href="http:\\www.baidu.com"  style="border: 1px solid black;"/>
+		</map>
+		<!--定义字方向-->
+		<bdo dir="rtl">
+			123456s11
+		</bdo>
+	</body>
+</html>
+<script></script>
